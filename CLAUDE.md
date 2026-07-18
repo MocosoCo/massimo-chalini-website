@@ -71,8 +71,9 @@ As of 2026-07-18, Massi uploaded real photos to the Drive folder for the first t
 
 All mediums here are Claude's best visual guess (per the guessing rule below) except "Corn Lady" 's title. Massi can correct any of them.
 
-**Still not added — a genuine size blocker, not a curation hold:**
-- Drive `Digital/Aurochskull/`: 7 files (1 JPG, 6 TIFF), all 15–78MB — **too large to download through the Drive MCP connector in this environment (10MB hard limit, confirmed no workaround — metadata doesn't expose a thumbnail/preview link, and the text-extraction tool doesn't support TIFF).** Patricio confirmed the medium is **digital** (not watercolor as originally guessed), and is downloading these manually since he has unrestricted Drive access; once they land locally (or in `Massimo-Artwork/digital/aurochskull/`), resize with `sips` and add them the same way as everything else — full-res TIFF scans are far larger than any website needs anyway (a 2000px-wide JPEG at ~80% quality is plenty)
+| "Aurochskull" | Digital | **Live** (`images/aurochskull.jpg`) | Patricio manually downloaded and handed off the 8 files that were too large for the Drive connector (was blocked at a 10MB limit — see below). All 8 turned out to be the same bison/aurochs skull illustration in different background/color treatments (teal, pink-green, grayscale, chainlink-fence-over-industrial-refinery, chainlink-fence-over-stock-ticker, etc.) — one artwork, not eight. Added the cleanest version (`IMG_0151.TIF`, plain white background) as the representative piece. Title used directly from the Drive folder name "Aurochskull" (same confidence level as "Corn Lady" — it's clearly his name for it, not a guess). The other 7 variant treatments are archived in `Massimo-Artwork/digital/aurochskull/Aurochskull/` if Massi wants to swap which background treatment is featured. |
+
+**Resolved 2026-07-18:** the Drive `Digital/Aurochskull/` files were too large for the Drive MCP connector (10MB hard limit, no workaround — confirmed metadata doesn't expose a thumbnail/preview link, and the text-extraction tool doesn't support TIFF). Patricio downloaded them manually and handed off a zip; now added to the site (see row above). This confirms the general pattern: files over 10MB need Patricio's manual download, everything else Claude can pull directly.
 
 ---
 
@@ -84,7 +85,6 @@ All mediums here are Claude's best visual guess (per the guessing rule below) ex
 4. **Exhibitions / recognition** — the about page has a section for shows. Fill in or remove.
 5. **Hero image** — the homepage background is a warm dark gradient. A strong painting would look great there once photographed.
 6. **Contact form** — needs a free Formspree account to actually deliver email. See DEPLOYMENT-GUIDE.md.
-7. **Aurochskull photos** — 7 large scan files sitting in Drive that Claude can't download automatically (10MB limit on the connector). Needs Patricio's help getting them into the repo, or smaller exports from Massi.
 
 ---
 
