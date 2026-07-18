@@ -50,8 +50,29 @@ As of 2026-07-18, Massi uploaded real photos to the Drive folder for the first t
 | "Counter" | Digital | **Live** (`images/counter.jpg`) | From Drive `Digital/Boxing/IMG_0143.JPG` — placeholder title, editable |
 | "The Trophy" | Digital | **Live** (`images/the-trophy.jpg`) | From Drive `Digital/IMG_0164.JPG` — a soccer/football illustration (Messi-style figure, World Cup trophy), different subject from the boxing motif elsewhere on the site. Added anyway per the "don't gatekeep" rule above — placeholder title, editable |
 
+**From the "Category unsure" Drive folder (added 2026-07-18, 14 pieces — all watercolor-and-ink sketchbook studies except one):**
+
+| Placeholder Title | Medium | Photo | Notes |
+|--------------------|--------|-------|-------|
+| "Among the Leaves" | Watercolor | **Live** (`images/among-the-leaves.jpg`) | Portrait study, foliage background |
+| "Ember" | Watercolor | **Live** (`images/ember.jpg`) | Monochrome orange/red portrait |
+| "Emerald" | Watercolor | **Live** (`images/emerald.jpg`) | Portrait, green background |
+| "Violet Hour" | Watercolor | **Live** (`images/violet-hour.jpg`) | Portrait, purple/blue tones |
+| "Cool Light" | Watercolor | **Live** (`images/cool-light.jpg`) | Portrait, blue background |
+| "Motion Study" | **Acrylic** | **Live** (`images/motion-study.jpg`) | Figure in motion — flat opaque color, not a wash, hence the different medium guess |
+| "The Gathering" | Watercolor | **Live** (`images/the-gathering.jpg`) | Group portrait, 4 figures |
+| "Study in Ink" | Watercolor | **Live** (`images/study-in-ink.jpg`) | B&W pen portrait with light wash |
+| "Marigold" | Watercolor | **Live** (`images/marigold.jpg`) | Colorful folk-art scene |
+| "Smoke Break" | Watercolor | **Live** (`images/smoke-break.jpg`) | Reclining figure portrait |
+| "The Set" | Watercolor | **Live** (`images/the-set.jpg`) | DJ turntables illustration |
+| "Crimson" | Watercolor | **Live** (`images/crimson.jpg`) | Monochrome red portrait |
+| "Held" | Watercolor | **Live** (`images/held.jpg`) | Two figures, sepia ink wash |
+| "Corn Lady" | Watercolor | **Live** (`images/corn-lady.jpg`) | Filename was `Massi_CornLady.JPG` — used that as the title directly since it's clearly his own name for it, not a random guess like the others |
+
+All mediums here are Claude's best visual guess (per the guessing rule below) except "Corn Lady" 's title. Massi can correct any of them.
+
 **Still not added — a genuine size blocker, not a curation hold:**
-- Drive `Digital/Aurochskull/`: 7 files (1 JPG, 6 TIFF), all 15–78MB — **too large to download through the Drive MCP connector in this environment (10MB hard limit, confirmed no workaround — metadata doesn't expose a thumbnail/preview link, and the text-extraction tool doesn't support TIFF).** Patricio is downloading these manually since he has unrestricted Drive access; once they land locally (or in `Massimo-Artwork/digital/aurochskull/`), resize with `sips` and add them the same way as everything else — full-res TIFF scans are far larger than any website needs anyway (a 2000px-wide JPEG at ~80% quality is plenty)
+- Drive `Digital/Aurochskull/`: 7 files (1 JPG, 6 TIFF), all 15–78MB — **too large to download through the Drive MCP connector in this environment (10MB hard limit, confirmed no workaround — metadata doesn't expose a thumbnail/preview link, and the text-extraction tool doesn't support TIFF).** Patricio confirmed the medium is **digital** (not watercolor as originally guessed), and is downloading these manually since he has unrestricted Drive access; once they land locally (or in `Massimo-Artwork/digital/aurochskull/`), resize with `sips` and add them the same way as everything else — full-res TIFF scans are far larger than any website needs anyway (a 2000px-wide JPEG at ~80% quality is plenty)
 
 ---
 
@@ -78,7 +99,9 @@ Massi doesn't touch this repo directly. He uploads to a shared Google Drive fold
 
 **Standing rule as of 2026-07-18 (Patricio's call): don't gatekeep.** Add every upload to the gallery right away with a simple placeholder title Massi can edit later (mark it "(placeholder title)" same as the original three). Don't wait for him to fill in the Paintings table first, and don't hold pieces back over whether they fit the site's aesthetic — Massi decides what goes up, not Claude. This overrides the earlier, more cautious approach from before this date.
 
-Same rule applies to **medium/category**: three gallery filter categories exist — `painting` (oil, acrylic, and other traditional physical media), `watercolor` (its own tab, distinct from Paintings), and `digital`. When adding a piece, use your best visual guess for which bucket it belongs in, mark it as guessable/editable the same way as titles, and don't block on Massi confirming first.
+Same rule applies to **medium/category**: gallery filter categories are `watercolor`, `acrylic`, `oil`, and `digital` (as of 2026-07-18 — the earlier generic `painting` bucket was split into these three specific ones per Patricio's request). When adding a piece, use your best visual guess for which bucket it belongs in, mark it as guessable/editable the same way as titles, and don't block on Massi confirming first.
+
+**Google Drive organization (2026-07-18):** the `Paintings` Drive folder now has `Watercolors`, `Acrylic`, and `Oil` subfolders matching the site's filter categories. Massi also has a "Category unsure" folder at the root of the Drive folder for anything he's not sure how to categorize himself — check it the same way as the other upload folders. When something in there gets categorized, copy it into the right `Paintings/<subfolder>` for organization — **but this connector can only copy, not move or delete**, so the original stays in "Category unsure" too. Don't re-process a file you've already added just because it's still sitting in that folder; check this file's tables above for what's already live before re-downloading.
 
 **For best iPhone photos of paintings** (relayed to Massi via the Drive folder's "How to Upload Your Photos" doc):
 - Shoot in natural daylight (window light, no flash, no overhead bulbs)
