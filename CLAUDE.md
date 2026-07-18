@@ -2,9 +2,9 @@
 
 ## Who you are
 
-Your name is **Massimo Chalini**. You're a painter and digital artist based in the Bay Area. Your Instagram is **@theskinnyhoudini**. Your work is dark, cinematic, and figurative — oil paintings and digital illustrations with a dramatic, high-contrast atmosphere. You're new to building websites and new to Claude, but your friend Patricio set all of this up for you.
+Your name is **Massimo Chalini**, but the site now brands you as **"Massi"** — you confirmed this via the Drive content doc, so it's live across nav, titles, and footer on every page. Your legal name still appears once, in your About bio. You're a painter and digital artist based in the Bay Area. Your Instagram is **@theskinnyhoudini**. Your work is dark, cinematic, and figurative — oil paintings and digital illustrations with a dramatic, high-contrast atmosphere. You're new to building websites and new to Claude, but your friend Patricio set all of this up for you.
 
-You may also go by **"Massi"** — this is being considered as a brand name. TBD.
+You don't use Claude Code or git directly — you upload photos and write content into a shared Google Drive folder ("Massi Website"), and Patricio (with Claude) picks it up from there. See the Drive folder for "Your Words — Website Content" and "Site Changes — Log" docs.
 
 ---
 
@@ -14,7 +14,7 @@ You may also go by **"Massi"** — this is being considered as a brand name. TBD
 - **He learns by doing.** Show him small, clear steps rather than big walls of text.
 - **Ask before assuming.** If you're not sure what he wants, ask one focused question.
 - **Celebrate progress.** Building a website is a big deal — acknowledge it.
-- **Check this file and `my-website-notes.md` at the start of every session.**
+- **Check this file, then the "Your Words" and "Site Changes — Log" docs in Massi's Drive folder, at the start of every session.** `my-website-notes.md` in this repo is a secondary/legacy copy — the Drive docs are the current source of truth for his answers and requests.
 
 ---
 
@@ -24,48 +24,58 @@ The full website is built and live across 5 pages:
 
 | Page | File | Status |
 |------|------|--------|
-| Homepage | `index.html` | Built — hero background is a gradient placeholder |
-| Gallery | `gallery.html` | 3 placeholder works listed (titles + medium only, no real photos yet) |
-| About | `about.html` | Placeholder photo + placeholder bio — needs Massimo's real words |
+| Homepage | `index.html` | Tagline and welcome line are real (from Massi). Hero background still a gradient placeholder. "The Fighter" and "Impact" tiles have real photos now; "The Veil" is still a placeholder tile |
+| Gallery | `gallery.html` | "The Fighter" and "Impact" have real photos; "The Veil" still placeholder |
+| About | `about.html` | Real bio line is live. Studio photo, artist statement, and exhibitions section are still placeholders |
 | Shop | `shop.html` | Built — "not open yet" state, ready for listings when he's ready to sell |
 | Commissions | `commissions.html` | Built — prices are placeholders |
 | Contact | `contact.html` | Built — needs free Formspree account to send email |
 
-No real painting photos exist in this repo yet — every artwork tile on the site is a styled placeholder ("Photo coming soon"). This is the very first thing to fix once Massimo sends real photos.
+As of 2026-07-18, Massi uploaded real photos to the Drive folder for the first time. Two (of five uploaded boxing pieces) are live on the site now — see "Paintings currently in the site" below for what's live vs. still waiting on a title.
 
 ---
 
-## Paintings currently in the site (all placeholders)
+## Paintings currently in the site
 
-| Placeholder Title | Medium | Notes |
-|--------------------|--------|-------|
-| "The Veil" | Oil on canvas | Hooded/masked figure — described only, no photo yet |
-| "The Fighter" | Digital | Boxer portrait — described only, no photo yet |
-| "Impact" | Digital | Two boxers, action scene — described only, no photo yet |
+| Placeholder Title | Medium | Photo | Notes |
+|--------------------|--------|-------|-------|
+| "The Veil" | Oil on canvas | Still placeholder | No photo uploaded yet |
+| "The Fighter" | Digital | **Live** (`images/the-fighter.jpg`) | Real photo from Drive `Digital/Boxing/IMG_0130.JPG`. Title still a placeholder — needs Massi's real title |
+| "Impact" | Digital | **Live** (`images/impact.jpg`) | Real photo from Drive `Digital/Boxing/IMG_0142.JPG`. Title still a placeholder — needs Massi's real title |
 
-**These titles are guesses carried over from early notes. Massimo should rename them to what he actually calls the pieces, and send real photos.**
+**These titles are still guesses. Massi left the Paintings table in "Your Words — Website Content" blank — real titles/medium/year/size/price are needed before these can be un-flagged as placeholders.**
+
+**Uploaded but not yet added to the site (waiting on titles, and curation input from Patricio — don't add without a title or a go-ahead):**
+- Drive `Digital/Boxing/`: IMG_0132.JPG (boxer, motion blur), IMG_0141.JPG and IMG_0143.JPG (rougher sketch-style boxing pieces, different visual style from the other two) — 3 more boxing pieces beyond the 2 already live
+- Drive `Digital/` root: IMG_0164.JPG — a soccer/football illustration (Messi-style figure, World Cup trophy). Different subject entirely from the dark/boxing motif elsewhere on the site — worth a deliberate call on whether/how it fits before adding
+- Drive `Digital/Aurochskull/`: 7 files (1 JPG, 6 TIFF), all 15–78MB — **too large to download through the Drive MCP connector in this environment (10MB hard limit)**. Needs Patricio to either download them directly (he has full Drive access, no size limit) or ask Massi to export smaller compressed JPEGs instead — full-res TIFF scans are far larger than any website needs anyway (a 2000px-wide JPEG at ~80% quality is plenty)
 
 ---
 
 ## What still needs Massimo's input
 
-1. **Real painting photos** — nothing has been uploaded yet. See "How to add a painting" below.
-2. **His bio** — `about.html` has placeholder text. Replace with his real story.
-3. **Real painting titles** — "The Veil", "The Fighter", "Impact" are temporary.
-4. **His artist statement / quote** — the homepage and about page have a placeholder quote.
-5. **Exhibitions / recognition** — the about page has a section for shows. Fill in or remove.
-6. **Hero image** — the homepage background is a warm dark gradient. A strong painting would look great there once photographed.
-7. **Contact form** — needs a free Formspree account to actually deliver email. See DEPLOYMENT-GUIDE.md.
+1. **Real painting titles, medium, year, size, price** — the Paintings table in "Your Words — Website Content" (Drive) is still blank. Needed before "The Fighter"/"Impact" placeholder titles can be replaced, and before any new pieces (the 3 extra boxing photos, the soccer piece, Aurochskull) can be added with real gallery card data.
+2. **A photo of "The Veil"** — still no photo for this one.
+3. **His artist statement / quote** — the homepage and about page have a placeholder quote.
+4. **Exhibitions / recognition** — the about page has a section for shows. Fill in or remove.
+5. **Hero image** — the homepage background is a warm dark gradient. A strong painting would look great there once photographed.
+6. **Contact form** — needs a free Formspree account to actually deliver email. See DEPLOYMENT-GUIDE.md.
+7. **Aurochskull photos** — 7 large scan files sitting in Drive that Claude can't download automatically (10MB limit on the connector). Needs Patricio's help getting them into the repo, or smaller exports from Massi.
 
 ---
 
-## How to add a painting
+## How a painting gets added (current workflow, as of 2026-07-18)
 
-1. Put the image file in `Massimo-Artwork/paintings/` (physical work) or `Massimo-Artwork/digital/` (digital work)
-2. Tell Claude: *"Add this painting to the gallery"* and give it the title, medium, and year
-3. Claude will copy it to `images/` and update `gallery.html` (and the homepage featured section, if it should be there) — replacing the placeholder tile with a real `<img>`
+Massi doesn't touch this repo directly. He uploads to a shared Google Drive folder ("Massi Website"), and Patricio tells Claude to sync:
 
-**For best iPhone photos of your paintings:**
+1. Massi uploads a photo to the Drive folder's Paintings, Digital, or Artist Photos subfolder, and (ideally) logs the title/medium/year/price in the "Your Words" doc's paintings table
+2. Patricio tells Claude to check the Drive folder
+3. Claude downloads it (files over 10MB need Patricio to grab them manually — the Drive connector has a hard size limit), resizes/compresses it for web with `sips`, copies it into `images/`, and updates `gallery.html` / the homepage featured section — replacing the placeholder tile with a real `<img>`
+4. Claude commits and pushes; Netlify auto-deploys
+
+Don't add a new gallery card with invented title/medium/price — if Massi hasn't given real details, leave it out (or use it only to fill an existing placeholder slot, keeping the placeholder title until he provides a real one).
+
+**For best iPhone photos of paintings** (relayed to Massi via the Drive folder's "How to Upload Your Photos" doc):
 - Shoot in natural daylight (window light, no flash, no overhead bulbs)
 - Straight-on — lens parallel to the canvas, not at an angle
 - Save as JPEG — iPhone quality is completely fine for websites
@@ -113,7 +123,6 @@ massimo-chalini-website/
 
 ## Future ideas to explore
 
-- **Branding as "Massi"** — Massimo is considering this as his artist brand name. Could affect the nav logo, domain name, and overall identity. Worth a full session on this.
 - **Blog / journal** — process posts, behind-the-scenes, work-in-progress.
 - **Instagram feed** — he's active as @theskinnyhoudini. Could embed or link more prominently.
 - **Domain name** — `massimochalini.com` or `massi.art` or similar.

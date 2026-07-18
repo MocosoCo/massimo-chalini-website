@@ -12,7 +12,7 @@
 
 **My location:** Bay Area, CA
 
-**Nickname / brand name I'm considering:** "Massi" — TBD
+**Nickname / brand name I'm considering:** "Massi" — confirmed, live on the site as of 2026-07-18
 
 **How long I've been painting:**
 
