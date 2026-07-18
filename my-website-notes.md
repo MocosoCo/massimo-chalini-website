@@ -8,7 +8,7 @@
 
 **My name:** Massimo Chalini
 
-**My Instagram:** @theskinnyhoudini
+**My Instagram:** @massipaints
 
 **My location:** Bay Area, CA
 

@@ -2,9 +2,14 @@
 
 ## Who you are
 
-Your name is **Massimo Chalini**, but the site now brands you as **"Massi"** — you confirmed this via the Drive content doc, so it's live across nav, titles, and footer on every page. Your legal name still appears once, in your About bio. You're a painter and digital artist based in the Bay Area. Your Instagram is **@theskinnyhoudini**. Your work is dark, cinematic, and figurative — oil paintings and digital illustrations with a dramatic, high-contrast atmosphere. You're new to building websites and new to Claude, but your friend Patricio set all of this up for you.
+Your name is **Massimo Chalini**, but the site now brands you as **"Massi"** — you confirmed this via the Drive content doc, so it's live across nav, titles, and footer on every page. Your legal name still appears once, in your About bio. You're a painter and digital artist based in the Bay Area. Your Instagram is **@massipaints**. Your work is dark, cinematic, and figurative — oil paintings and digital illustrations with a dramatic, high-contrast atmosphere. You're new to building websites and new to Claude, but your friend Patricio set all of this up for you.
 
 You don't use Claude Code or git directly — you upload photos and write content into a shared Google Drive folder ("Massi Website"), and Patricio (with Claude) picks it up from there. See the Drive folder for "Your Words — Website Content" and "Site Changes — Log" docs.
+
+**Fixed 2026-07-18 (bugs found by Patricio testing the live site):**
+- Instagram links across all pages were pointing to the wrong handle (`@theskinnyhoudini`, a leftover from early setup) — corrected to `@massipaints` (matches the domain name).
+- `gallery.html`'s `.gallery-grid` container was accidentally closed early (bug from an earlier Claude edit), so the watercolor/acrylic pieces and Aurochskull were rendering full-width outside the grid instead of as thumbnails. Fixed — verify grid layout looks right after any future bulk card insertion into this file.
+- The lightbox/detail modal never actually showed the clicked photo — it always displayed the static "Photo coming soon" placeholder regardless of what was clicked, because the modal's image element was never wired up in `js/main.js`. Fixed: clicking a card now shows its real photo full-size in the modal (falls back to the placeholder only for cards with no real photo yet, like "The Veil"). This also added support for multi-image pieces via a `data-variants` attribute (see the Aurochskull entry below) — a thumbnail strip in the modal lets you swap the featured image.
 
 ---
 
@@ -71,7 +76,7 @@ As of 2026-07-18, Massi uploaded real photos to the Drive folder for the first t
 
 All mediums here are Claude's best visual guess (per the guessing rule below) except "Corn Lady" 's title. Massi can correct any of them.
 
-| "Aurochskull" | Digital | **Live** (`images/aurochskull.jpg`) | Patricio manually downloaded and handed off the 8 files that were too large for the Drive connector (was blocked at a 10MB limit — see below). All 8 turned out to be the same bison/aurochs skull illustration in different background/color treatments (teal, pink-green, grayscale, chainlink-fence-over-industrial-refinery, chainlink-fence-over-stock-ticker, etc.) — one artwork, not eight. Added the cleanest version (`IMG_0151.TIF`, plain white background) as the representative piece. Title used directly from the Drive folder name "Aurochskull" (same confidence level as "Corn Lady" — it's clearly his name for it, not a guess). The other 7 variant treatments are archived in `Massimo-Artwork/digital/aurochskull/Aurochskull/` if Massi wants to swap which background treatment is featured. |
+| "Aurochskull" | Digital | **Live** (`images/aurochskull.jpg` + 7 more) | Patricio manually downloaded and handed off the 8 files that were too large for the Drive connector. All 8 are the same bison/aurochs skull illustration in different background/color treatments — one artwork, not eight, so it's ONE gallery card, not eight. The card carries a `data-variants` attribute listing all 8 image paths (`images/aurochskull.jpg`, `-teal`, `-rose`, `-slate`, `-mono`, `-fence-1`, `-fence-2`, `-fence-3`); clicking the card opens the lightbox with the white-background version featured plus a thumbnail strip of the other 7 underneath — click a thumbnail to swap the featured image. This `data-variants` pattern is reusable for any future piece with multiple versions/angles, not just this one. |
 
 **Resolved 2026-07-18:** the Drive `Digital/Aurochskull/` files were too large for the Drive MCP connector (10MB hard limit, no workaround — confirmed metadata doesn't expose a thumbnail/preview link, and the text-extraction tool doesn't support TIFF). Patricio downloaded them manually and handed off a zip; now added to the site (see row above). This confirms the general pattern: files over 10MB need Patricio's manual download, everything else Claude can pull directly.
 
@@ -152,7 +157,7 @@ massimo-chalini-website/
 ## Future ideas to explore
 
 - **Blog / journal** — process posts, behind-the-scenes, work-in-progress.
-- **Instagram feed** — he's active as @theskinnyhoudini. Could embed or link more prominently.
+- **Instagram feed** — he's active as @massipaints. Could embed or link more prominently.
 - **Domain name** — `massimochalini.com` or `massi.art` or similar.
 - **Shop** — the page is built but empty. Gumroad or Square are the easiest options to wire in without building a custom store.
 

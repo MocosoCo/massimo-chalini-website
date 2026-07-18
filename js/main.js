@@ -30,6 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = modalOverlay.querySelector('.modal-title');
     const modalMeta = modalOverlay.querySelector('.modal-meta');
     const modalClose = modalOverlay.querySelector('.modal-close');
+    const modalImg = modalOverlay.querySelector('.modal-img');
+    const modalImgFallback = modalOverlay.querySelector('.modal-img-fallback');
+    const modalVariants = modalOverlay.querySelector('.modal-variants');
+
+    const setModalImage = (src, alt) => {
+      if (src) {
+        modalImg.src = src;
+        modalImg.alt = alt || '';
+        modalImg.style.display = '';
+        modalImgFallback.style.display = 'none';
+      } else {
+        modalImg.removeAttribute('src');
+        modalImg.style.display = 'none';
+        modalImgFallback.style.display = '';
+      }
+    };
 
     galleryCards.forEach(card => {
       card.addEventListener('click', () => {
@@ -40,6 +56,30 @@ document.addEventListener('DOMContentLoaded', () => {
           <div>Size: ${card.dataset.size}</div>
           <div>${card.dataset.price}</div>
         `;
+
+        const cardImg = card.querySelector('.art-tile img');
+        setModalImage(cardImg ? cardImg.getAttribute('src') : null, cardImg ? cardImg.alt : '');
+
+        modalVariants.innerHTML = '';
+        const variants = card.dataset.variants;
+        if (variants) {
+          variants.split(',').forEach((src, i) => {
+            const thumb = document.createElement('img');
+            thumb.src = src;
+            thumb.alt = `${card.dataset.title} — version ${i + 1}`;
+            if (cardImg && src === cardImg.getAttribute('src')) thumb.classList.add('active');
+            thumb.addEventListener('click', () => {
+              setModalImage(src, thumb.alt);
+              modalVariants.querySelectorAll('img').forEach(t => t.classList.remove('active'));
+              thumb.classList.add('active');
+            });
+            modalVariants.appendChild(thumb);
+          });
+          modalVariants.style.display = '';
+        } else {
+          modalVariants.style.display = 'none';
+        }
+
         modalOverlay.classList.add('open');
       });
     });
