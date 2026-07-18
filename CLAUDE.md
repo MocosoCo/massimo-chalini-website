@@ -45,10 +45,13 @@ As of 2026-07-18, Massi uploaded real photos to the Drive folder for the first t
 
 **These titles are still guesses. Massi left the Paintings table in "Your Words — Website Content" blank — real titles/medium/year/size/price are needed before these can be un-flagged as placeholders.**
 
-**Uploaded but not yet added to the site (waiting on titles, and curation input from Patricio — don't add without a title or a go-ahead):**
-- Drive `Digital/Boxing/`: IMG_0132.JPG (boxer, motion blur), IMG_0141.JPG and IMG_0143.JPG (rougher sketch-style boxing pieces, different visual style from the other two) — 3 more boxing pieces beyond the 2 already live
-- Drive `Digital/` root: IMG_0164.JPG — a soccer/football illustration (Messi-style figure, World Cup trophy). Different subject entirely from the dark/boxing motif elsewhere on the site — worth a deliberate call on whether/how it fits before adding
-- Drive `Digital/Aurochskull/`: 7 files (1 JPG, 6 TIFF), all 15–78MB — **too large to download through the Drive MCP connector in this environment (10MB hard limit)**. Needs Patricio to either download them directly (he has full Drive access, no size limit) or ask Massi to export smaller compressed JPEGs instead — full-res TIFF scans are far larger than any website needs anyway (a 2000px-wide JPEG at ~80% quality is plenty)
+| "Slip" | Digital | **Live** (`images/slip.jpg`) | From Drive `Digital/Boxing/IMG_0132.JPG` — placeholder title, editable |
+| "Wrapped" | Digital | **Live** (`images/wrapped.jpg`) | From Drive `Digital/Boxing/IMG_0141.JPG` — placeholder title, editable |
+| "Counter" | Digital | **Live** (`images/counter.jpg`) | From Drive `Digital/Boxing/IMG_0143.JPG` — placeholder title, editable |
+| "The Trophy" | Digital | **Live** (`images/the-trophy.jpg`) | From Drive `Digital/IMG_0164.JPG` — a soccer/football illustration (Messi-style figure, World Cup trophy), different subject from the boxing motif elsewhere on the site. Added anyway per the "don't gatekeep" rule above — placeholder title, editable |
+
+**Still not added — a genuine size blocker, not a curation hold:**
+- Drive `Digital/Aurochskull/`: 7 files (1 JPG, 6 TIFF), all 15–78MB — **too large to download through the Drive MCP connector in this environment (10MB hard limit, confirmed no workaround — metadata doesn't expose a thumbnail/preview link, and the text-extraction tool doesn't support TIFF).** Patricio is downloading these manually since he has unrestricted Drive access; once they land locally (or in `Massimo-Artwork/digital/aurochskull/`), resize with `sips` and add them the same way as everything else — full-res TIFF scans are far larger than any website needs anyway (a 2000px-wide JPEG at ~80% quality is plenty)
 
 ---
 
@@ -73,7 +76,7 @@ Massi doesn't touch this repo directly. He uploads to a shared Google Drive fold
 3. Claude downloads it (files over 10MB need Patricio to grab them manually — the Drive connector has a hard size limit), resizes/compresses it for web with `sips`, copies it into `images/`, and updates `gallery.html` / the homepage featured section — replacing the placeholder tile with a real `<img>`
 4. Claude commits and pushes; Netlify auto-deploys
 
-Don't add a new gallery card with invented title/medium/price — if Massi hasn't given real details, leave it out (or use it only to fill an existing placeholder slot, keeping the placeholder title until he provides a real one).
+**Standing rule as of 2026-07-18 (Patricio's call): don't gatekeep.** Add every upload to the gallery right away with a simple placeholder title Massi can edit later (mark it "(placeholder title)" same as the original three). Don't wait for him to fill in the Paintings table first, and don't hold pieces back over whether they fit the site's aesthetic — Massi decides what goes up, not Claude. This overrides the earlier, more cautious approach from before this date.
 
 **For best iPhone photos of paintings** (relayed to Massi via the Drive folder's "How to Upload Your Photos" doc):
 - Shoot in natural daylight (window light, no flash, no overhead bulbs)
