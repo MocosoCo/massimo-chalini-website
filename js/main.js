@@ -50,12 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryCards.forEach(card => {
       card.addEventListener('click', () => {
         modalTitle.textContent = card.dataset.title;
-        modalMeta.innerHTML = `
-          <div>Medium: ${card.dataset.medium}</div>
-          <div>Year: ${card.dataset.year}</div>
-          <div>Size: ${card.dataset.size}</div>
-          <div>${card.dataset.price}</div>
-        `;
+        modalMeta.textContent = `${card.dataset.medium} · ${card.dataset.year} · ${card.dataset.size} · ${card.dataset.price}`;
 
         const cardImg = card.querySelector('.art-tile img');
         setModalImage(cardImg ? cardImg.getAttribute('src') : null, cardImg ? cardImg.alt : '');
