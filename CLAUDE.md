@@ -78,6 +78,8 @@ Massi doesn't touch this repo directly. He uploads to a shared Google Drive fold
 
 **Standing rule as of 2026-07-18 (Patricio's call): don't gatekeep.** Add every upload to the gallery right away with a simple placeholder title Massi can edit later (mark it "(placeholder title)" same as the original three). Don't wait for him to fill in the Paintings table first, and don't hold pieces back over whether they fit the site's aesthetic — Massi decides what goes up, not Claude. This overrides the earlier, more cautious approach from before this date.
 
+Same rule applies to **medium/category**: three gallery filter categories exist — `painting` (oil, acrylic, and other traditional physical media), `watercolor` (its own tab, distinct from Paintings), and `digital`. When adding a piece, use your best visual guess for which bucket it belongs in, mark it as guessable/editable the same way as titles, and don't block on Massi confirming first.
+
 **For best iPhone photos of paintings** (relayed to Massi via the Drive folder's "How to Upload Your Photos" doc):
 - Shoot in natural daylight (window light, no flash, no overhead bulbs)
 - Straight-on — lens parallel to the canvas, not at an angle
