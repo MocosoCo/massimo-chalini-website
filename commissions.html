@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commissions — Massimo Chalini</title>
+<meta name="description" content="Commission a portrait or custom piece from Massimo Chalini.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Massimo Chalini</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="commissions.html" class="active">Commissions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-social">
+      <a href="https://instagram.com/theskinnyhoudini" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="page-header">
+  <h1>Commissions</h1>
+  <p>Custom portraits and pieces, painted in Massimo's dark, cinematic style.</p>
+</div>
+
+<section>
+  <div class="container">
+    <span class="placeholder-flag">Placeholder — Massimo, confirm what you do/don't take</span>
+    <p style="color:var(--text-muted-solid); max-width:680px; margin-bottom:10px;">
+      Currently open for portrait commissions — people, pets, and figurative pieces in oil or as
+      digital illustration. Not currently taking pure abstract or landscape work.
+    </p>
+
+    <h2 style="margin-top:56px; margin-bottom:10px; font-size:1.6rem;">How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Inquire</h4>
+        <p>Send a message with your idea, references, and size.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Consultation</h4>
+        <p>We talk through the concept, size, and price.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Sketch &amp; Deposit</h4>
+        <p>A 50% deposit locks in your spot; a rough sketch follows for approval.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4>Delivery</h4>
+        <p>Final piece, photographed and shipped (or delivered locally).</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:56px; margin-bottom:10px; font-size:1.6rem;">Pricing</h2>
+    <span class="placeholder-flag">Placeholder prices — update with your real rates</span>
+    <table class="price-table">
+      <thead>
+        <tr><th>Size</th><th>Oil on Canvas</th><th>Digital</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>8" × 10"</td><td>Starting at $400</td><td>Starting at $250</td></tr>
+        <tr><td>11" × 14"</td><td>Starting at $650</td><td>Starting at $350</td></tr>
+        <tr><td>16" × 20"</td><td>Starting at $950</td><td>Starting at $500</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--text-muted-solid); font-size:0.9rem; margin-top:16px;">
+      Typical turnaround is 4–6 weeks depending on current workload. A 50% deposit is required to
+      begin.
+    </p>
+
+    <h2 style="margin-top:56px; margin-bottom:24px; font-size:1.6rem;">Request a Commission</h2>
+    <div class="form-card">
+      <!-- Replace YOUR_FORM_ID with your real Formspree form ID -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-two-col">
+          <div class="form-row">
+            <label for="c-name">Name</label>
+            <input type="text" id="c-name" name="name" required>
+          </div>
+          <div class="form-row">
+            <label for="c-email">Email</label>
+            <input type="email" id="c-email" name="email" required>
+          </div>
+        </div>
+        <div class="form-two-col">
+          <div class="form-row">
+            <label for="c-size">Size</label>
+            <select id="c-size" name="size">
+              <option>8" × 10"</option>
+              <option>11" × 14"</option>
+              <option>16" × 20"</option>
+              <option>Other / not sure</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="c-budget">Budget</label>
+            <input type="text" id="c-budget" name="budget" placeholder="e.g. $400–600">
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="c-subject">Subject</label>
+          <input type="text" id="c-subject" name="subject" placeholder="Who or what is this piece of?">
+        </div>
+        <div class="form-row">
+          <label for="c-deadline">Deadline (if any)</label>
+          <input type="text" id="c-deadline" name="deadline">
+        </div>
+        <div class="form-row">
+          <label for="c-message">Message</label>
+          <textarea id="c-message" name="message" placeholder="Tell me more about what you have in mind." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send Request</button>
+      </form>
+      <p class="form-note">This form needs a free Formspree account connected before it'll actually deliver email — see DEPLOYMENT-GUIDE.md.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-name">Massimo Chalini</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Shop</a>
+    <a href="commissions.html">Commissions</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://instagram.com/theskinnyhoudini" target="_blank" rel="noopener">@theskinnyhoudini</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Massimo Chalini. All rights reserved.</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
